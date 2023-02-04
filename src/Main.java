@@ -7,61 +7,68 @@ public class Main {
         task5();
 
 
-
-
     }
 
-public static void task1 () {
-    System.out.println("Задача 1");
-    int clientOS = 1;
-    if (clientOS==1){
-        System.out.println("Установите версию Андроид по ссылке ...");}
-    else if (clientOS==0){
-        System.out.println("Установите версию иОС по ссылке ...");}
-    else {
-        System.out.println("К сожалению мы не поддерживаем данные версии");}}
+    public static void task1() {
+        System.out.println("Задача 1");
+        int clientOS = 1;
+        if (clientOS == 1) {
+            System.out.println("Установите версию Андроид по ссылке ...");
+        } else if (clientOS == 0) {
+            System.out.println("Установите версию иОС по ссылке ...");
+        } else {
+            System.out.println("К сожалению мы не поддерживаем данные версии");
+        }
+    }
 
-    public static void task2 () {
+    public static void task2() {
         System.out.println("Задача 2");
-        int clientOS=2;
-        int clientDeviceYear=2015;
-        if (clientOS == 1 && clientDeviceYear<2015){
-            System.out.println("Установите облегченную версию приложения для Android по ссылке ...");}
-        else if (clientOS == 1 && clientDeviceYear>=2015) {
-            System.out.println("Установите современную версию Андроид по ссылке ... ");}
-        else if (clientOS == 0 && clientDeviceYear<2015) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке ...");}
-        else if (clientOS == 0 && clientDeviceYear>=2015) {
-            System.out.println("Установите современную версию iOS по ссылке ..."); }
-        else {
+        int clientOS = 2;
+        int clientDeviceYear = 2015;
+        if (clientOS == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке ...");
+        } else if (clientOS == 1 && clientDeviceYear >= 2015) {
+            System.out.println("Установите современную версию Андроид по ссылке ... ");
+        } else if (clientOS == 0 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке ...");
+        } else if (clientOS == 0 && clientDeviceYear >= 2015) {
+            System.out.println("Установите современную версию iOS по ссылке ...");
+        } else {
             System.out.println("Мы не поддерживаем, то что у вас");
 
-        }}
-    public static void task3 () {
+        }
+    }
+
+    public static void task3() {
         System.out.println("Задача 3");
-        int year = 2028;
-        boolean verification = year%400 == 0 || year%4 == 0;
+        int year = 2020;
+        boolean verification = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
         if (verification) {
-            System.out.println("Этот год високосный");}
-        else {
+            System.out.println("Этот год високосный");
+        } else {
             System.out.println("Этот год невисокосный");
-    }}
-    public static void task4 () {
+        }
+    }
+
+    public static void task4() {
         System.out.println("Задача 4");
         int deliveryDistance = 120;
-        int daysToTake = 1;
-        if (deliveryDistance>20) {
-            daysToTake++;
-
-    } if (deliveryDistance>60) {
-            daysToTake++;
+        if (deliveryDistance <= 100) {
+            int daysToTake = 1;
+            if (deliveryDistance > 20) {
+                daysToTake++;
             }
-        System.out.println("Потребуется дней: " + daysToTake);
-        if (deliveryDistance>100) {
-            System.out.println("Свыше 100 км доставки нет");}
-
+            if (deliveryDistance > 60) {
+                daysToTake++;
+            }
+            System.out.println("Потребуется дней: " + daysToTake);
+        } else {
+            System.out.println("Свыше 100 км доставки нет");
+        }
     }
-    public static void task5 () {
+
+
+    public static void task5() {
         System.out.println("Задача 5");
         int monthNumber = 12;
         switch (monthNumber) {
@@ -103,5 +110,7 @@ public static void task1 () {
                 break;
             default:
                 System.out.println("Такого месяца нет");
-    }}}
+        }
+    }
+}
 
